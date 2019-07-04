@@ -71,7 +71,7 @@
       <%= form.label :author_id, Spree.t(:author_id) %><br />
       <%= form.select :author_id, Spree.user_class.joins(:spree_roles).where("#{Spree::Role.table_name}.name" => "blogger").collect {|u| [u.email, u.id]}, {:include_blank => true}, :class => 'select2' %>
     <% end %>
-	</div><!-- col-sm-6 -->	
+	</div><!-- col-sm-6 -->
 	</div><!-- row -->
 <div class='row'>
   <div class="col-sm-6">
@@ -96,7 +96,7 @@
           <%= blog_entry_image_field.text_field :alt , :class => 'form-control' %>
 	  </div><!-- form-group -->
         <% end %>
-</div><!-- col-sm-6 -->		
+</div><!-- col-sm-6 -->
       <% end %>
     <% end %>
 

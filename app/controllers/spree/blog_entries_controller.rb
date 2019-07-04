@@ -1,4 +1,6 @@
 class Spree::BlogEntriesController < Spree::StoreController
+  before_action :new_subscriber
+  
   helper 'spree/blog_entries'
 
   before_filter :init_pagination, :only => [:index, :tag, :archive, :author, :category]
