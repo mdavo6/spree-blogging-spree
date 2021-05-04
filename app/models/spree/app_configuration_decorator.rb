@@ -1,6 +1,10 @@
 module Spree
   module AppConfigurationDecorator
-    preference :blog_alias, :string, default: 'blog'
+
+    def self.prepended(base)
+      base.preference :blog_alias, :string, default: 'blog'
+    end
+    
   end
 end
 
