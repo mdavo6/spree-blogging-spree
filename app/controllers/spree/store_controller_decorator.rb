@@ -1,6 +1,10 @@
 module Spree
   module StoreControllerDecorator
-    helper 'spree/blog_entries'
+
+    def self.prepended(base)
+      base.helper 'spree/blog_entries'
+    end
+    
   end
 end
 
